@@ -10,7 +10,7 @@ interface UsersPageProps {
 const Users: React.FC<UsersPageProps> = ({ posts }) => {
   return (
     <div className="p-6">
-      <h1 className="text-3xl font-bold mb-6">User List</h1>
+      <h1 className="text-3xl font-bold mb-4">User List</h1>
       {posts.map((user) => (
         <UserCard key={user.id} user={user} />
       ))}
@@ -30,4 +30,3 @@ export async function getStaticProps() {
 }
 
 export default Users;
-

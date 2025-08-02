@@ -1,8 +1,13 @@
-// components/common/UserCard.tsx
 import React from "react";
 import { UserProps } from "../../interfaces";
 
-const UserCard: React.FC<UserProps> = ({ name, email, username, address, phone, website, company }) => {
+interface UserCardProps {
+  user: UserProps;
+}
+
+const UserCard: React.FC<UserCardProps> = ({ user }) => {
+  const { name, email, username, address, phone, website, company } = user;
+
   return (
     <div className="border rounded-xl p-4 shadow-md bg-white hover:shadow-lg transition">
       <h2 className="text-xl font-bold mb-2">{name}</h2>

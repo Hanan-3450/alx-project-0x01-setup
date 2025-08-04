@@ -1,14 +1,16 @@
-import React from "react";
+import Link from "next/link";
 
-const Home: React.FC = () => {
+export default function Home() {
   return (
-    <div className="p-6">
-      <h1 className="text-3xl font-bold">Welcome to ALX Project</h1>
-      <p className="mt-4 text-gray-600">
-        Navigate to /users or /posts to view the pages.
-      </p>
-    </div>
+    <main className="flex min-h-screen items-center justify-center bg-gray-100">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold mb-6">Welcome to the App</h1>
+        <Link href="/users">
+          <button className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+            Go to Users Page
+          </button>
+        </Link>
+      </div>
+    </main>
   );
-};
-
-export default Home;
+}
